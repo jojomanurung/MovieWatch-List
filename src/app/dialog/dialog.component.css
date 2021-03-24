@@ -1,6 +1,6 @@
 .form-block {
-  display: block;
-  width: 550px;
+  display: flexbox;
+  width: 100%;
 }
 
 .full-width {
