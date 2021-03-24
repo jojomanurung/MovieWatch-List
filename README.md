@@ -1,27 +1,46 @@
 # MovieWatchList
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+This is the solution to the challange from [ZettaByte Pte Ltd](https://www.zettabyte.sg/).
 
-## Development server
+## Table of contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Deploy to](#deploy-to)
 
-## Code scaffolding
+## Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### The challenge
 
-## Build
+Recreating My Movie Watch List app with form control based on [this](https://my-movie-watch-list.vercel.app/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Screenshot
 
-## Running unit tests
+#### Desktop
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![](WIP)
 
-## Running end-to-end tests
+#### Mobile
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+![](WIP)
 
-## Further help
+### Links
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Solution URL: [GitHub](https://github.com/jojomanurung/MovieWatch-List)
+- Live Site URL: WIP [My Movie Watch List](WIP)
+
+## My process
+
+### Built with
+
+- Generated and build with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+- [Material Angular](https://material.angular.io/) version 11.2.5
+- CSS custom properties
+
+### Deploy to
+
+- (will) [Netlify](https://netlify.com)
