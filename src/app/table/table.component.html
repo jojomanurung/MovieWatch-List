@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="row">
+    <div class="col title-watch-list">
+      <h1>My Movie Watch List</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col btn-add-movie">
+      <button mat-raised-button color="primary" (click)="openDialog()">
+        Add Movie
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col tbl-watch-list">
+      <table mat-table [dataSource]="data" class="mat-elevation-z8">
+        <!--Tittle-->
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef class="header title-col">
+            Title
+          </th>
+          <td mat-cell class="title-col" *matCellDef="let element">
+            {{ element.title }}
+          </td>
+        </ng-container>
+
+        <!--Episodes-->
+        <ng-container matColumnDef="episodes">
+          <th mat-header-cell *matHeaderCellDef class="header episodes-col">
+            Episodes
+          </th>
+          <td mat-cell class="episodes-col" *matCellDef="let element">
+            {{ element.episodes }}
+          </td>
+        </ng-container>
+
+        <!--Info URL-->
+        <ng-container matColumnDef="info_url">
+          <th mat-header-cell *matHeaderCellDef class="header info-col">
+            Info URL
+          </th>
+          <td mat-cell class="info-col" *matCellDef="let element">
+            <a (click)="openLink(element.info_url)">movie info</a>
+          </td>
+        </ng-container>
+
+        <!--Watch URL-->
+        <ng-container matColumnDef="watch_url">
+          <th mat-header-cell *matHeaderCellDef class="header watch-col">
+            Watch URL
+          </th>
+          <td mat-cell class="watch-col" *matCellDef="let element">
+            <a (click)="openLink(element.watch_url)">watch movie</a>
+          </td>
+        </ng-container>
+
+        <!--Action-->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef class="header action-col">
+            Action
+          </th>
+          <td mat-cell class="action-col" *matCellDef="let element">
+            <button
+              mat-icon-button
+              aria-label="mat-icon"
+              color="accent"
+              (click)="onSelect(element)"
+            >
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button
+              mat-icon-button
+              aria-label="mat-icon"
+              color="accent"
+              (click)="onSelect(element)"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </div>
+</div>

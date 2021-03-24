@@ -1,0 +1,15 @@
+.form-block {
+  display: block;
+  width: 550px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.btn-position {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}

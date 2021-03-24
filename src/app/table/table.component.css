@@ -1,0 +1,96 @@
+table {
+  width: 100%;
+}
+a {
+  cursor: pointer;
+  color: rgb(63, 81, 181);
+}
+/*Grouping*/
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.title-watch-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.btn-add-movie {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.tbl-watch-list {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.header {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title-col {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.episodes-col,
+.info-col,
+.watch-col,
+.action-col {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+/*@Media*/
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
