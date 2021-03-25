@@ -1,6 +1,5 @@
-.form-block {
-  display: flexbox;
-  width: 100%;
+input {
+  font-size: 15px;
 }
 
 .full-width {
