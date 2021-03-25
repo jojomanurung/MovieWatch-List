@@ -22,11 +22,11 @@ Recreating My Movie Watch List app with form control based on [this](https://my-
 
 #### Desktop
 
-![](WIP)
+![](./screenshot/Desktop.PNG)
 
 #### Mobile
 
-![](WIP)
+![](./screenshot/Mobile.PNG)
 
 ### Links
 
