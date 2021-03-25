@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 //App Component
 import { TableComponent } from './table/table.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { DialogService } from './dialog.service';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 //Material Angular
 import { MatTableModule } from '@angular/material/table';
@@ -19,17 +21,19 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    DialogComponent
+    DialogComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
+    ReactiveFormsModule,
     MatTableModule,
     MatButtonModule,
     MatIconModule,
@@ -37,8 +41,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [DialogService],
   bootstrap: [AppComponent],
-  entryComponents: [DialogComponent]
+  entryComponents: [DialogComponent, ConfirmDialogComponent]
 })
 export class AppModule { }
