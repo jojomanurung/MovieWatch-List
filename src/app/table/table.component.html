@@ -7,15 +7,13 @@
 
   <div class="row">
     <div class="col btn-add-movie">
-      <button mat-raised-button color="primary" (click)="openDialog()">
-        Add Movie
-      </button>
+      <button mat-raised-button color="primary">Add Movie</button>
     </div>
   </div>
 
   <div class="row">
     <div class="col tbl-watch-list">
-      <table mat-table [dataSource]="data" class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
         <!--Tittle-->
         <ng-container matColumnDef="title">
           <th mat-header-cell *matHeaderCellDef class="header title-col">
@@ -66,7 +64,7 @@
               mat-icon-button
               aria-label="mat-icon"
               color="accent"
-              (click)="onSelect(element)"
+              (click)="edit(element)"
             >
               <mat-icon>edit</mat-icon>
             </button>
@@ -74,7 +72,7 @@
               mat-icon-button
               aria-label="mat-icon"
               color="accent"
-              (click)="onSelect(element)"
+              (click)="delete(element['id'])"
             >
               <mat-icon>delete</mat-icon>
             </button>
