@@ -1,40 +1,32 @@
 <h1 mat-dialog-title>Add a Movie</h1>
 
 <div mat-dialog-content>
-  <!--Movie Title-->
-  <!--div class="form-block"-->
-  <form class="form-block">
+  <form>
+    <!--Movie Title-->
     <mat-form-field appearance="legacy" class="full-width" hideRequiredMarker>
       <mat-label>Movie title</mat-label>
       <input matInput focused required />
       <mat-error> <!--*ngIf Here--> </mat-error>
     </mat-form-field>
-    <!--div-->
 
     <!--Amount of episode-->
-    <!--div class="form-block"-->
     <mat-form-field appearance="legacy" class="full-width">
       <mat-label>Amount of episodes</mat-label>
-      <input matInput type="number" />
+      <input matInput type="number" min="1" />
       <span matSuffix>episodes</span>
     </mat-form-field>
-    <!--div-->
 
     <!--Movie information URL-->
-    <!--div class="form-block"-->
     <mat-form-field appearance="legacy" class="full-width">
       <mat-label>Movie information URL</mat-label>
       <input matInput />
     </mat-form-field>
-    <!--div-->
 
     <!--Movie watch URL-->
-    <!--div class="form-block"-->
     <mat-form-field appearance="legacy" class="full-width">
       <mat-label>Movie watch URL</mat-label>
       <input matInput />
     </mat-form-field>
-    <!--div-->
   </form>
 </div>
 
