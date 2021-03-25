@@ -1,31 +1,50 @@
 <h1 mat-dialog-title>Add a Movie</h1>
 
 <div mat-dialog-content>
-  <form>
+  <form [formGroup]="formInstance">
     <!--Movie Title-->
     <mat-form-field appearance="legacy" class="full-width" hideRequiredMarker>
       <mat-label>Movie title</mat-label>
-      <input matInput focused required />
-      <mat-error> <!--*ngIf Here--> </mat-error>
+      <input
+        matInput
+        type="text"
+        name="title"
+        formControlName="title"
+        cdkFocusInitial
+      />
+      <mat-error
+        *ngIf="formInstance.controls['firstName']?.errors?.required"
+      ></mat-error>
     </mat-form-field>
 
     <!--Amount of episode-->
     <mat-form-field appearance="legacy" class="full-width">
       <mat-label>Amount of episodes</mat-label>
-      <input matInput type="number" min="1" />
+      <input
+        matInput
+        type="number"
+        min="1"
+        name="episodes"
+        formControlName="episodes"
+      />
       <span matSuffix>episodes</span>
     </mat-form-field>
 
     <!--Movie information URL-->
     <mat-form-field appearance="legacy" class="full-width">
       <mat-label>Movie information URL</mat-label>
-      <input matInput />
+      <input matInput type="text" name="info_url" formControlName="info_url" />
     </mat-form-field>
 
     <!--Movie watch URL-->
     <mat-form-field appearance="legacy" class="full-width">
       <mat-label>Movie watch URL</mat-label>
-      <input matInput />
+      <input
+        matInput
+        type="text"
+        name="watch_url"
+        formControlName="watch_url"
+      />
     </mat-form-field>
   </form>
 </div>
@@ -33,6 +52,6 @@
 <div mat-dialog-actions>
   <div class="btn-position">
     <button mat-raised-button color="accent" (click)="close()">Cancel</button>
-    <button mat-raised-button color="primary" cdkFocusInitial>Submit</button>
+    <button mat-raised-button color="primary" (click)="save()">Submit</button>
   </div>
 </div>
