@@ -31,7 +31,7 @@ Recreating My Movie Watch List app with form control based on [this](https://my-
 ### Links
 
 - Solution URL: [GitHub](https://github.com/jojomanurung/MovieWatch-List)
-- Live Site URL: WIP [My Movie Watch List](WIP)
+- Live Site URL: [My Movie Watch List](https://my-moviewatch-list.netlify.app/)
 
 ## My process
 
@@ -41,6 +41,8 @@ Recreating My Movie Watch List app with form control based on [this](https://my-
 - [Material Angular](https://material.angular.io/) version 11.2.5
 - CSS custom properties
 
+- Add Menu still not working, reading movie.id value as null.(WIP)
+
 ### Deploy to
 
-- (will) [Netlify](https://netlify.com)
+- [Netlify](https://netlify.com)
