@@ -6,37 +6,38 @@ import { Movie, movies } from './movie-data';
   providedIn: 'root'
 })
 export class DialogService {
-  moviesList: BehaviorSubject<Movie[]>;
-  data: Array<Movie> = [];
+  _data: BehaviorSubject<Movie[]>;
+  data: Movie[] = [];
 
-  constructor() {
-    this.moviesList = new BehaviorSubject([]);
+  constructor(
+  ) {
+    this._data = new BehaviorSubject([]);
     this.data = movies;
   }
 
+
   getAll() {
-    this.moviesList.next(this.data);
+    this._data.next(this.data);
   }
 
-  add(moviess: Movie) {
-    this.data.push(moviess);
+  addMovie(add: Movie) {
+    this.data.push(add);
+    console.log("add data success", this.data);
+    this._data.next(this.data);
   }
 
-  edit(moviess: Movie) {
-    let findElem = this.data.find(m => m.id == moviess.id);
-    findElem.title = moviess.title;
-    findElem.episodes = moviess.episodes;
-    findElem.info_url = moviess.info_url;
-    findElem.watch_url = moviess.watch_url;
-    this.moviesList.next(this.data);
+  editMovie(editData: Movie) {
+    const findElem = this.data.findIndex(m => m.id == editData.id);
+    this.data[findElem] = editData;
+    console.log("this data edited", this.data);
+    this._data.next(this.data);
   }
 
-  remove(id: string) {
-    this.data = this.data.filter(m => {
-      return m.id != id
-    });
-
-    this.moviesList.next(this.data);
+  removeMovie(removeData: Movie) {
+    const findElem = this.data.findIndex(m => m.id == removeData.id);
+    this.data.splice(findElem, 1);
+    console.log("movie removed", this.data);
+    this._data.next(this.data);
   }
 
 }

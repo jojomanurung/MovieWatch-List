@@ -1,8 +1,8 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Movie, movies } from '../movie-data';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
+import { Movie } from '../movie-data';
 
 @Component({
   selector: 'app-dialog',
@@ -10,32 +10,28 @@ import { Movie, movies } from '../movie-data';
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent implements OnInit {
+  dialogTitle: string = "";
 
-  formInstance: FormGroup;
+  movieForm = this.fb.group({
+    id: new FormControl (''),
+    title: new FormControl ('', Validators.required),
+    episodes: new FormControl (''),
+    watch_url: new FormControl (''),
+    info_url: new FormControl ('')
+  });
 
   constructor(
     private dialogRef: MatDialogRef<DialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public dat: Movie
-  ) { this.formInstance = new FormGroup({
-    "id": new FormControl('',),
-    "title": new FormControl('', Validators.required),
-    "episodes": new FormControl(''),
-    "info_url": new FormControl(''),
-    "watch_url": new FormControl('')
-  });
-  this.formInstance.setValue(dat);
-  }
+    private fb: FormBuilder,
+    @Inject(MAT_DIALOG_DATA) public data: Movie
+  ) { this.movieForm.patchValue(this.data); }
 
 
   ngOnInit(): void {
-
   }
 
-  save(): void {
-    this.dialogRef.close(Object.assign(new Movie(), this.formInstance.value));
+  onSubmit() {
+    this.dialogRef.close(Object.assign(new Movie(), this.movieForm.value));
   }
 
-  close() {
-    this.dialogRef.close();
-  }
 }
