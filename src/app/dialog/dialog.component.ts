@@ -10,7 +10,7 @@ import { Movie } from '../movie-data';
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent implements OnInit {
-  dialogTitle: string = "";
+  dialogTitle: string = "Movies"
 
   movieForm = this.fb.group({
     id: new FormControl (''),
