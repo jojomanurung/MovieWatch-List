@@ -1,5 +1,5 @@
 export class Movie {
-  id: string;
+  id?: string;
   title: string;
   episodes: number;
   info_url: string;
@@ -7,9 +7,8 @@ export class Movie {
 }
 
 
-
   // you can use this as mock data for table
-export const movies: Movie[] = [
+  export const movies: Movie[] = [
     {
       id: '1',
       title: 'Shingeki no Kyojin: The Final Season',
@@ -32,3 +31,4 @@ export const movies: Movie[] = [
       watch_url: 'https://kissasians.org/detail/start-up-2020/'
     },
   ];
+
