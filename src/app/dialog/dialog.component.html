@@ -1,7 +1,7 @@
-<h1 mat-dialog-title>Add a Movie</h1>
+<h1 mat-dialog-title>{{ dialogTitle }}</h1>
 
 <div mat-dialog-content>
-  <form [formGroup]="formInstance">
+  <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
     <!--Movie Title-->
     <mat-form-field appearance="legacy" class="full-width" hideRequiredMarker>
       <mat-label>Movie title</mat-label>
@@ -13,7 +13,7 @@
         cdkFocusInitial
       />
       <mat-error
-        *ngIf="formInstance.controls['firstName']?.errors?.required"
+        *ngIf="movieForm.controls['firstName']?.errors?.required"
       ></mat-error>
     </mat-form-field>
 
@@ -46,12 +46,18 @@
         formControlName="watch_url"
       />
     </mat-form-field>
-  </form>
-</div>
 
-<div mat-dialog-actions>
-  <div class="btn-position">
-    <button mat-raised-button color="accent" (click)="close()">Cancel</button>
-    <button mat-raised-button color="primary" (click)="save()">Submit</button>
-  </div>
+    <div class="btn-position">
+      <button mat-raised-button color="accent" mat-dialog-close>Cancel</button>
+      <button
+        mat-raised-button
+        class="btn-padding"
+        color="primary"
+        type="submit"
+        [disabled]="!movieForm.valid"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
 </div>
