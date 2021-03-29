@@ -37,11 +37,9 @@ Recreating My Movie Watch List app with form control based on [this](https://my-
 
 ### Built with
 
-- Generated and build with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+- Generated and build with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5
 - [Material Angular](https://material.angular.io/) version 11.2.5
 - CSS custom properties
-
-- Add Menu still not working, reading movie.id value as null.(WIP)
 
 ### Deploy to
 
