@@ -16,7 +16,8 @@ This is the solution to the challange from [ZettaByte Pte Ltd](https://www.zetta
 
 ### The challenge
 
-Recreating My Movie Watch List app with form control based on [this](https://my-movie-watch-list.vercel.app/).
+Recreating My Movie Watch List app based on [this](https://my-movie-watch-list.vercel.app/).
+
 My job is to make CRUD (Create, Read, Update, and Delete) app. Using table to display the mock data then
 performing add, update and delete action using modal pop-up.
 
