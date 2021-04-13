@@ -1,6 +1,6 @@
 # MovieWatchList
 
-This is the solution to the challange from [ZettaByte Pte Ltd](https://www.zettabyte.sg/).
+This is the solution to the challenge from [ZettaByte Pte Ltd](https://www.zettabyte.sg/).
 
 ## Table of contents
 
